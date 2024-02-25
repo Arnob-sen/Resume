@@ -20,7 +20,7 @@
         <li><a href="#portfolio" >Portfolio</a></li>
         <li><a href="#contact" >Contact</a></li>
     </ul>
-    <div class="bx bx-menu" id="meny-icon"></div>
+    <div class="bx bx-menu" id="menu-icon"></div>
 </header>
 
 <section class="home" id="home">
@@ -130,7 +130,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
                 <div class="layer">
                    <h5>ESHOP</h5>
                    <p>This is a ecommerce website build in React and Firebase</p>
-                   <a href="#"><i class='bx bx-link-external'></i></a>
+                   <a href="https://github.com/Arnob-sen/ESHOP_Website" target="_blank"><i class='bx bx-link-external'></i></a>
 
                 </div>
             </div>
@@ -139,7 +139,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
                 <div class="layer">
                    <h5>FITNESS APP</h5>
                    <p>This is a FITNESS APP build in React Native and RapidApi</p>
-                   <a href="#"><i class='bx bx-link-external'></i></a>
+                   <a href="https://github.com/Arnob-sen/Solo_Run" target="_blank"><i class='bx bx-link-external'></i></a>
                    
                 </div>
             </div>
@@ -148,7 +148,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
                 <div class="layer">
                    <h5>ANIHELP</h5>
                    <p>This is a platform for taking care of animak health build in React and Firebase</p>
-                   <a href="#"><i class='bx bx-link-external'></i></a>
+                   <a href="https://github.com/Arnob-sen/AniHelp" target="_blank"><i class='bx bx-link-external'></i></a>
                    
                 </div>
             </div>
@@ -157,7 +157,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
                 <div class="layer">
                    <h5>QUOTE GENERATOR</h5>
                    <p>This is a QUOTE GENERATOR website build in React</p>
-                   <a href="#"><i class='bx bx-link-external'></i></a>
+                   <a href="https://github.com/Arnob-sen/Quote_generator" target="_blank"><i class='bx bx-link-external'></i></a>
                    
                 </div>
             </div>
@@ -166,7 +166,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
                 <div class="layer">
                    <h5>Sing From The word</h5>
                    <p>This is a platform where people can play game with letter build in React</p>
-                   <a href="#"><i class='bx bx-link-external'></i></a>
+                   <a href="https://github.com/Arnob-sen/famjam" target="_blank"><i class='bx bx-link-external'></i></a>
                    
                 </div>
 
@@ -223,6 +223,16 @@ In addition to my web and mobile development skills, I have a strong foundation 
     window.addEventListener('scroll',function(){
         header.classList.toggle("sticky",window.scrollY>100)
     })
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.navlist');
+    menu.onclick = ()=>{
+        menu.classList.toggle('bx-x');
+        navlist.classList.toggle('open')
+    }
+    window.onscroll=()=>{
+        menu.classList.remove('bx-x');
+        navlist.classList.remove('open')   
+    }
    </script> 
 </body>
 </html>
