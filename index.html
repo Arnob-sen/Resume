@@ -64,7 +64,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
 
 
         </p>
-         <a href="#" class="btn">More about</a>
+         <a href="./arnob-sen-github-i....pdf" class="btn">Download CV</a>
     </div>
 </section>
 <section class="services" id="services">
@@ -80,12 +80,25 @@ In addition to my web and mobile development skills, I have a strong foundation 
 
             </div>
             <h3>Web Development</h3>
-            <p>
+            <!-- <p>
                 I offer web development services for various types of projects, from e-commerce to social media platforms. I use React, a popular and powerful JavaScript library, to create dynamic and user-friendly front-end interfaces. I also use Node, Express, and MongoDB to build fast and scalable back-end applications. I have experience in working with HTML, CSS, Bootstrap, and Tailwind CSS to design responsive and attractive web pages. Whether you need a simple landing page or a complex web application, I can help you achieve your goals with my web development skills.
 
 
+            </p> -->
+            <p class="partial-content">
+                <!-- Partial content that is always visible -->
+                I offer web development services for various types of projects, from e-commerce to social media platforms. 
+                <!-- End of partial content -->
             </p>
-            <a href="#" class="read">Read More</a>
+            <p class="full-content" style="display: none;">
+                <!-- Full content that is initially hidden -->
+                I use React, a popular and powerful JavaScript library, to create dynamic and user-friendly front-end interfaces. 
+                I also use Node, Express, and MongoDB to build fast and scalable back-end applications. 
+                I have experience in working with HTML, CSS, Bootstrap, and Tailwind CSS to design responsive and attractive web pages. 
+                Whether you need a simple landing page or a complex web application, I can help you achieve your goals with my web development skills.
+                <!-- End of full content -->
+            </p>
+            <button class="read">Read More</button>
 
 
         </div>
@@ -95,10 +108,16 @@ In addition to my web and mobile development skills, I have a strong foundation 
 
             </div>
             <h3>Prototype design</h3>
-            <p>
+            <!-- <p>
             I can help you design and test your digital products using Figma, a versatile and collaborative prototyping tool. I can create prototypes that show how your web and mobile apps will look and function, and how users will interact with them. I can also conduct user testing and collect feedback to validate and refine your prototypes. Whether you need a low-fidelity wireframe or a high-fidelity mockup, I can deliver realistic and interactive prototypes that meet your needs and expectations.
+        </p> -->
+        <p class="partial-content">
+            I can help you design and test your digital products using Figma, a versatile and collaborative prototyping tool 
         </p>
-            <a href="#" class="read">Read More</a>
+        <p class="full-content" style="display: none;">
+            I can create prototypes that show how your web and mobile apps will look and function, and how users will interact with them. I can also conduct user testing and collect feedback to validate and refine your prototypes. Whether you need a low-fidelity wireframe or a high-fidelity mockup, I can deliver realistic and interactive prototypes that meet your needs and expectations.
+        </p>
+        <button class="read">Read More</button>
             
 
         </div>
@@ -108,10 +127,18 @@ In addition to my web and mobile development skills, I have a strong foundation 
 
             </div>
             <h3>App Development</h3>
-            <p>
+            <!-- <p>
             I can help you create mobile apps that run on both iOS and Android devices using React Native, a popular and powerful framework for cross-platform app development. I have a strong foundation in app development and have worked on various projects using React Native. Whether you need a simple app or a complex one, I can deliver high-quality and user-friendly mobile solutions that meet your needs and expectations.
+        </p> -->
+        <p class="partial-content">
+            I can help you create mobile apps that run on both iOS and Android devices using React Native, a popular and powerful framework for cross-platform app development
+
         </p>
-            <a href="#" class="read">Read More</a>
+        <p class="full-content" style="display: none;">
+            I have a strong foundation in app development and have worked on various projects using React Native. Whether you need a simple app or a complex one, I can deliver high-quality and user-friendly mobile solutions that meet your needs and expectations.
+        </p>
+
+        <button class="read">Read More</button>
             
 
         </div>
@@ -281,6 +308,24 @@ In addition to my web and mobile development skills, I have a strong foundation 
         menu.classList.remove('bx-x');
         navlist.classList.remove('open')   
     }
+    // Get all elements with the class "read"
+const readButtons = document.querySelectorAll('.read');
+
+// Loop through each button and add a click event listener
+readButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the corresponding full content and toggle its visibility
+        const fullContent = this.previousElementSibling; // Assuming the full content is just before the button
+        if (fullContent.style.display === 'none') {
+            fullContent.style.display = 'block';
+            this.textContent = 'Read Less';
+        } else {
+            fullContent.style.display = 'none';
+            this.textContent = 'Read More';
+        }
+    });
+});
+
    </script> 
 </body>
 </html>
