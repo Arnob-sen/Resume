@@ -14,12 +14,12 @@
 <header>
     <a href="#" class="logo">Programmer</a>
     <ul class="navlist">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about" >About</a></li>
-        <li><a href="#services" >Services</a></li>
-        <li><a href="#portfolio" >Portfolio</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact" >Contact</a></li>
+        <li><a href="#home" id="home-link" class="active">Home</a></li>
+        <li><a href="#about" id="about-link">About</a></li>
+        <li><a href="#services" id="services-link">Services</a></li>
+        <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
+        <li><a href="#education" id="education-link">Education</a></li>
+        <li><a href="#contact" id="contact-link">Contact</a></li>
     </ul>
     <div class="bx bx-menu" id="menu-icon"></div>
 </header>
@@ -223,7 +223,7 @@ In addition to my web and mobile development skills, I have a strong foundation 
                     <h3>SHAHJALAL UNIVERSIY OF SCIENCE AND TECHNOLOGY</h3>
                     <p>Major: SOFTWARE ENGINEERING</p>
                     <p>Expected Graduation: December 2025</p>
-                    
+                    <!-- <p>Additional information about your university or academic program.</p> -->
                 </div>
                 <div class="box">
                     <h3>Relevant Courses</h3>
@@ -242,9 +242,11 @@ In addition to my web and mobile development skills, I have a strong foundation 
                 <div class="box">
                     <h3>Notable Projects</h3>
                     <ul>
-                        <li>Game Project </li>
-                        <li>Obejct-oriented Project</li>
-                        <li>App development Project</li>
+                        <a href="https://github.com/Arnob-sen/gameproject" target="_blank"><li>Snake Game by C++</li></a>
+                      <a href="https://github.com/Arnob-sen/street_bike_game" target="_blank">  <li>2D game project of street bike with SFML and C++ </li></a>
+                        <a href="https://github.com/Arnob-sen/java_calculator" target="_blank"><li>Calculator By JAVA</li></a>
+                       <a href="https://github.com/Arnob-sen/our_java_game_project_flappy_bird" target="_blank"> <li>Flappy Bird By JAVA</li></a>
+                       <a href="https://github.com/Arnob-sen/Solo_Run" target="_blank"> <li>Fitness App By REACT NATIVE</li></a>
                         <!-- Add more projects as needed -->
                     </ul>
                 </div>
@@ -252,6 +254,8 @@ In addition to my web and mobile development skills, I have a strong foundation 
         </section>
         
     </section>
+
+    
     <section class="contact" id="contact">
         <div class="contact-text">
             <h2>Contact <span>Me</span></h2>
@@ -293,37 +297,8 @@ In addition to my web and mobile development skills, I have a strong foundation 
 
     </section>
 
-   <script>
-    const header=document.querySelector('header')
-    window.addEventListener('scroll',function(){
-        header.classList.toggle("sticky",window.scrollY>100)
-    })
-    let menu = document.querySelector('#menu-icon');
-    let navlist = document.querySelector('.navlist');
-    menu.onclick = ()=>{
-        menu.classList.toggle('bx-x');
-        navlist.classList.toggle('open')
-    }
-    window.onscroll=()=>{
-        menu.classList.remove('bx-x');
-        navlist.classList.remove('open')   
-    }
-    
-const readButtons = document.querySelectorAll('.read');
-// Loop through each button and add a click event listener
-readButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        // Find the corresponding full content and toggle its visibility
-        const fullContent = this.previousElementSibling; // Assuming the full content is just before the button
-        if (fullContent.style.display === 'none') {
-            fullContent.style.display = 'block';
-            this.textContent = 'Read Less';
-        } else {
-            fullContent.style.display = 'none';
-            this.textContent = 'Read More';
-        }
-    });
-});
+   <script src="./script.js">
+   
 
    </script> 
 </body>

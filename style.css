@@ -613,4 +613,6 @@ header.sticky{
 
 .education-content .box ul li {
     margin-bottom: 10px;
+    color: var(--text--color);
 }
+
